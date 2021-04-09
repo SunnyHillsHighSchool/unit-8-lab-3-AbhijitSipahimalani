@@ -369,8 +369,8 @@ public class Picture
   public void  reflectPicture(){
     int x = this.getWidth();
     Pixel [] [] pic = this.getPixels2D();
-    for(int i  = 0; i < this.getHeight(); i++){
-      for(int j = 0; j < this.getWidth()/2 ; j++){
+    for(int i  = 0; i < this.getWidth(); i++){
+      for(int j = 0; j < this.getHeight/2 ; j++){
         Color temp = pic [i][j].getColor();
         pic [i] [j].setColor(pic [x-i] [j].getColor()); 
         pic [x-i] [j].setColor(temp);
