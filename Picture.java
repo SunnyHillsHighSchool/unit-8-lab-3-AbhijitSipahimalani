@@ -365,10 +365,17 @@ public class Picture
       return false;
     }
   }
-
    ////////////////////// methods ///////////////////////////////////////
-
-   
-
-
-} // this } is the end of class Picture, put all new methods before this
+  public void  reflectPicture(){
+    int x = this.getWidth();
+    Pixel [] [] pic = this.getPixels2D();
+    for(int i  = 0; i < this.getHeight(); i++){
+      for(int j = 0; j < this.getWidth()/2 ; j++){
+        Color temp = pic [i][j].getColor();
+        pic [i] [j].setColor(pic [x-i] [j].getColor()); 
+        pic [x-i] [j].setColor(temp);
+      }
+    }
+}
+} 
+// this } is the end of class Picture, put all new methods before this
